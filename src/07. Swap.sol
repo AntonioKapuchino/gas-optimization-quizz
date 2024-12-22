@@ -1,9 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.25;
 
-import "./Interfaces.sol";
-
-contract Swap is ISwap {
+contract Swap {
     function swap(uint256 a, uint256 b) public pure returns (uint256, uint256) {
         a = a + b;
         b = a - b;
@@ -12,8 +10,8 @@ contract Swap is ISwap {
     }
 }
 
-contract SwapOptimized is ISwap {
+contract SwapOptimized {
     function swap(uint256 a, uint256 b) public pure returns (uint256, uint256) {
-        /* YOUR SOLUTION GOES HERE */
+        return (b,a);
     }
 }

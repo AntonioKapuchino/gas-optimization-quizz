@@ -1,9 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.25;
 
-import "./Interfaces.sol";
-
-contract ArrayLength is IArrayLength {
+contract ArrayLength {
     uint256[] public myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     function callFor() public view {
@@ -13,10 +11,10 @@ contract ArrayLength is IArrayLength {
     }
 }
 
-contract ArrayLengthOptimized is IArrayLength {
+contract ArrayLengthOptimized {
     uint256[] public myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     function callFor() public view {
-        /* YOUR SOLUTION GOES HERE */
+        myArray.length;
     }
 }
